@@ -13,6 +13,7 @@ import android.view.WindowManager;
 
 public class Alarm extends Activity {
 	private DisableAlarmSlide disableAlarmSlide;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
