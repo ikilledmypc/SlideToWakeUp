@@ -5,9 +5,11 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="9"
-        android:targetSdkVersion="18" />
+        android:minSdkVersion="11"
+        android:targetSdkVersion="20" />
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -16,17 +18,8 @@
         <activity
             android:name="nl.tim.slidetowakeup.MainActivity"
             android:label="@string/title_activity_main" >
-        </activity>
-        <activity
-            android:name="nl.tim.slidetowakeup.SetTime"
-            android:label="@string/title_activity_set_time" >
-        </activity>
-        <activity
-            android:name="nl.tim.slidetowakeup.MainMenu"
-            android:label="@string/title_activity_main_menu" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -34,6 +27,8 @@
             android:name="nl.tim.slidetowakeup.Alarm"
             android:label="@string/title_activity_alarm" >
         </activity>
+
+        <receiver android:name=".AlarmReceiver" />
     </application>
 
 </manifest>
